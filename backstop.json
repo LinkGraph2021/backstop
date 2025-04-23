@@ -1,0 +1,38 @@
+{
+  "id": "backstop_default",
+  "viewports": [
+    {
+      "label": "desktop",
+      "width": 1280,
+      "height": 1024
+    },
+    {
+      "label": "mobile",
+      "width": 375,
+      "height": 667
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "Home page",
+      "url": "https://example.com",
+      "selectors": ["document"],
+      "readyEvent": null,
+      "delay": 500
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["browser"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
+  "reportPath": "backstop_data/html_report",
+  "debug": false,
+  "debugWindow": false
+}
